@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Sprouts</title>
+
+    <!-- Fonts and Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HERO / HOME SECTION -->
+    <section id="home" class="hero pb-6 text-white">
+      <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light glass-navbar fixed-top">
+        <a class="navbar-brand logo-glow" href="#">
+          <img src="images/logo-bg.png" alt="Super Sprouts Logo" height="100"/>
+        </a>
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="openNavModal()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="https://wa.me/919999999999" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp" style="color:#25d366;font-size:1.4em;vertical-align:middle;"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      </header>
+      <!-- Modal Navbar for mobile -->
+      <div id="navModal" class="nav-modal">
+        <div class="nav-modal-content">
+          <span class="nav-modal-close" onclick="closeNavModal()">&times;</span>
+          <ul class="nav-modal-links">
+            <li><a href="#home" onclick="closeNavModal()">Home</a></li>
+            <li><a href="#menu" onclick="closeNavModal()">Menu</a></li>
+            <li><a href="#about" onclick="closeNavModal()">About</a></li>
+            <li><a href="#contact" onclick="closeNavModal()">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="container hero-content d-flex flex-column flex-md-row align-items-center justify-content-between mt-5"
+        style="padding-top: 120px;"
+      >
+        <div class="hero-text col-md-6">
+          <h1
+            class="display-4 fw-bold"
+            style="font-family: 'Anton', sans-serif"
+          >
+            FRESH. HEALTHY.<br />DELICIOUS SPROUTS.
+          </h1>
+          <p class="lead">Eat fresh every day with our tasty sprout recipes!</p>
+        </div>
+        <div class="hero-img col-md-5 text-center mt-4 mt-md-0">
+          <img
+            src="images/sprouts_cup.png"
+            alt="Sprouts with dry fruits"
+            class="img-fluid premium-hover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU (Elegant Plate Style with Slider) -->
+      <section id="menu" class="menu-elegant-section d-flex align-items-center min-vh-100 pb-5" style="font-family: 'Poppins', 'Anton', sans-serif;">
+      <div class="container-fluid">
+        <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-uppercase">Our Menu</h2>
+        </div>
+        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center align-items-stretch gap-4 flex-wrap menu-slider-row">
+                <div class="menu-plate-card text-center">
+                  <a href="details.html?item=sprout" class="d-block menu-link">
+                    <div class="menu-plate-img mx-auto mb-3">
+                      <img src="images/item1.jpg" alt="Sprout" class="img-fluid" />
+                    </div>
+                    <h3 class="menu-plate-title">Sprout</h3>
+                    <div class="menu-plate-desc">Classic sprouts, fresh and healthy.</div>
+                    <div class="menu-plate-price">₹50</div>
+                  </a>
+                </div>
+                <div class="menu-plate-card text-center">
+                  <a href="details.html?item=sprouts-fruits" class="d-block menu-link">
+                    <div class="menu-plate-img mx-auto mb-3">
+                      <img src="images/item2.png" alt="Sprouts with Fruits" class="img-fluid" />
+                    </div>
+                    <h3 class="menu-plate-title">Sprouts with Fruits</h3>
+                    <div class="menu-plate-desc">Sprouts with a medley of fresh fruits.</div>
+                    <div class="menu-plate-price">₹70</div>
+                  </a>
+                </div>
+                <div class="menu-plate-card text-center">
+                  <a href="details.html?item=sprouts-dryfruits" class="d-block menu-link">
+                    <div class="menu-plate-img mx-auto mb-3">
+                      <img src="images/item3.png" alt="Sprouts with Dry Fruits" class="img-fluid" />
+                    </div>
+                    <h3 class="menu-plate-title">Sprouts with Dry Fruits</h3>
+                    <div class="menu-plate-desc">Sprouts with premium dry fruits.</div>
+                    <div class="menu-plate-price">₹70</div>
+                  </a>
+                </div>
+                <div class="menu-plate-card text-center">
+                  <a href="details.html?item=sprouts-egg" class="d-block menu-link">
+                    <div class="menu-plate-img mx-auto mb-3">
+                      <img src="images/item4.jpg" alt="Sprouts with Egg" class="img-fluid" />
+                    </div>
+                    <h3 class="menu-plate-title">Sprouts with Egg</h3>
+                    <div class="menu-plate-desc">Sprouts topped with protein-rich egg.</div>
+                    <div class="menu-plate-price">₹65</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Custom Arrow Controls -->
+          <div class="menu-arrow-controls d-flex justify-content-center align-items-center mt-4 gap-4">
+            <button class="menu-arrow-btn menu-arrow-prev" aria-label="Previous">
+              <span class="menu-arrow-icon">&#8592;</span>
+            </button>
+            <button class="menu-arrow-btn menu-arrow-next" aria-label="Next">
+              <span class="menu-arrow-icon">&#8594;</span>
+            </button>
+          </div>
+        </div>
+        <script>
+        // Elegant menu slider: always show 3, loop both ways, animate slide, rearrange DOM
+        document.addEventListener('DOMContentLoaded', function() {
+          const carousel = document.querySelector('#menuCarousel');
+          const row = carousel.querySelector('.menu-slider-row');
+          let cards = Array.from(row.children);
+          let start = 0;
+          const visible = 3;
+          let animating = false;
+
+          function getIndices(start, visible, total) {
+            // Always return 3 indices, wrapping as needed
+            return Array.from({length: visible}, (_, i) => (start + i) % total);
+          }
+
+          function updateSlider(direction) {
+            // Remove animation classes
+            cards.forEach(card => card.classList.remove('slide-left', 'slide-right'));
+            // Rearrange DOM so visible cards are first 3
+            const indices = getIndices(start, visible, cards.length);
+            const newOrder = indices.map(i => cards[i]);
+            // Add the rest (not visible)
+            for (let i = 0; i < cards.length; i++) {
+              if (!indices.includes(i)) newOrder.push(cards[i]);
+            }
+            // Remove all from row, then append in new order
+            while (row.firstChild) row.removeChild(row.firstChild);
+            newOrder.forEach(card => row.appendChild(card));
+            // Update cards reference
+            cards = Array.from(row.children);
+            // Show/hide
+            cards.forEach((card, i) => {
+              card.style.display = i < visible ? 'block' : 'none';
+              if (i < visible && direction) {
+                card.classList.add(direction === 'right' ? 'slide-left' : 'slide-right');
+              }
+            });
+            // Remove animation class after animation
+            if (direction) {
+              animating = true;
+              setTimeout(() => {
+                for (let i = 0; i < visible; i++) {
+                  cards[i].classList.remove('slide-left', 'slide-right');
+                }
+                animating = false;
+              }, 400);
+            }
+          }
+
+          updateSlider();
+          // Hide default Bootstrap arrows if present
+          const bsPrev = carousel.querySelector('.carousel-control-prev');
+          const bsNext = carousel.querySelector('.carousel-control-next');
+          if (bsPrev) bsPrev.style.display = 'none';
+          if (bsNext) bsNext.style.display = 'none';
+          // Custom arrow controls
+          const customPrev = carousel.querySelector('.menu-arrow-prev');
+          const customNext = carousel.querySelector('.menu-arrow-next');
+          customNext.onclick = function(e) {
+            e.preventDefault();
+            if (animating) return;
+            start = (start + visible) % cards.length;
+            updateSlider('right');
+          };
+          customPrev.onclick = function(e) {
+            e.preventDefault();
+            if (animating) return;
+            start = (start - visible + cards.length) % cards.length;
+            updateSlider('left');
+          };
+        });
+        </script>
+      </div>
+    </section>
+
+    <!-- ABOUT (Mission) -->
+    <section id="about" class="about-mission-section d-flex align-items-center min-vh-100 py-5">
+      <div class="container-fluid">
+        <div class="row g-0 align-items-stretch about-mission-row">
+          <div class="col-lg-6 about-mission-img-col">
+            <div class="about-mission-img h-100 w-100" style="background: url('images/sprouts_img.jpg') center center/cover no-repeat;"></div>
+          </div>
+          <div class="col-lg-6 about-mission-content-col d-flex align-items-center">
+            <div class="about-mission-content-col-bg-solid about-mission-content p-5 w-100">
+              <h2 class="about-mission-title mb-5" style="color: #fffbe6; font-family: 'Poppins',sans-serif; font-size: 2.5rem; font-weight: 600;">OUR MISSION</h2>
+              <div class="mb-4">
+                <h5 class="about-mission-subtitle mb-2" style="color: #fffbe6; font-size: 1.2rem; font-weight: 500;">Our Story</h5>
+                <p class="about-mission-text mb-4" style="color: #fffbe6; font-size: 1rem;">Super Sprouts, located in Mysuru, specializes in healthy sprout-based dishes designed for conscious eaters.</p>
+              </div>
+              <div class="mb-5">
+                <h5 class="about-mission-subtitle mb-2" style="color: #fffbe6; font-size: 1.2rem; font-weight: 500;">Our Vision</h5>
+                <p class="about-mission-text" style="color: #fffbe6; font-size: 1rem;">We take pride in offering unique combinations of sprouts with fruits, dry fruits, or egg, catering to the health-conscious customer who seeks flavor and nutrition. Every dish is crafted with care, ensuring a delightful experience that supports a healthy lifestyle. Our mission is to make sprouted meals accessible and enjoyable for everyone.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+      <section id="contact" class="d-flex align-items-center min-vh-100 py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-4 fw-bold text-uppercase">Contact Us</h2>
+          <p class="text-muted">
+            We'd love to hear from you. Drop us a message!
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <form
+              action="feedback.php"
+              method="POST"
+              class="bg-white p-4 p-md-5 shadow rounded-4"
+            >
+              <div class="form-floating mb-4">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+                <label for="name">Your Name</label>
+              </div>
+              <div class="form-floating mb-4">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+                <label for="email">Your Email</label>
+              </div>
+              <div class="form-floating mb-4">
+                <textarea
+                  name="message"
+                  id="message"
+                  class="form-control"
+                  placeholder="Your Message"
+                  style="height: 150px"
+                  required
+                ></textarea>
+                <label for="message">Your Message</label>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-danger btn-lg w-100 rounded-pill shadow-sm"
+              >
+                Send Feedback
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+      <footer class="text-white text-center py-4">
+      <div class="container">
+        <p>Follow us on:</p>
+        <div class="social-icons mb-3">
+          <a
+            href="javascript:void(0)"
+            class="facebook me-3"
+            onclick="openModal()"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="javascript:void(0)"
+            class="instagram me-3"
+            onclick="openModal()"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="javascript:void(0)"
+            class="youtube me-3"
+            onclick="openModal()"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="javascript:void(0)" class="whatsapp" onclick="openModal()"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+        <p>&copy; 2025 Super Sprouts. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <!-- <div
+      id="comingSoonModal"
+      class="modal d-flex align-items-center justify-content-center"
+      style="display: none"
+    >
+      <div
+        class="modal-content text-center position-relative bg-white p-4 rounded shadow"
+        style="max-width: 400px"
+      >
+        <span
+          class="close-btn position-absolute top-0 end-0 m-3 fs-4"
+          onclick="closeModal()"
+          >&times;</span
+        >
+        <h2 class="text-danger">Coming Soon</h2>
+        <p>We are working on our Social Platform. Stay tuned! 😊</p>
+      </div>
+    </div> -->
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function openModal() {
+        document.getElementById("comingSoonModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("comingSoonModal").style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        const modal = document.getElementById("comingSoonModal");
+        if (event.target === modal) {
+          closeModal();
+        }
+        // Close nav modal if clicked outside content
+        const navModal = document.getElementById("navModal");
+        if (event.target === navModal) {
+          closeNavModal();
+        }
+      };
+
+      // Modal navbar functions
+      function openNavModal() {
+        document.getElementById('navModal').style.display = 'flex';
+      }
+      function closeNavModal() {
+        document.getElementById('navModal').style.display = 'none';
+      }
+    </script>
+  </body>
+</html>
