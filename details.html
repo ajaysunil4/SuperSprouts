@@ -12,21 +12,34 @@
 </head>
 <body>
 
-  <header class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html"
-          ><img src="images/logo-bg.png" alt="Super Sprouts Logo" height="100"
-        /></a>
-      <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="openNavModal()">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-links">
-        <li class="nav-item"><a class="nav-link fw-bold " href="index.html#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold " href="index.html#menu">Menu</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold " href="index.html#about">About</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold " href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="container-fluid pb-1">
+      <nav class="navbar navbar-expand-lg navbar-light glass-navbar fixed-top">
+        <a class="navbar-brand logo-glow" href="#">
+          <img src="images/logo.png" alt="Super Sprouts Logo" height="100"/>
+        </a>
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="openNavModal()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="https://wa.me/917022076781" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp" style="color:#25d366;font-size:1.4em;vertical-align:middle;"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
     <!-- Modal Navbar for mobile -->
     <div id="navModal" class="nav-modal">
       <div class="nav-modal-content">

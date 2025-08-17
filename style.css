@@ -1,27 +1,62 @@
 /* About Us right column solid color background matching site palette */
 /* About Us right column solid color background matching site palette */
+/* Remove card-like appearance for About Us right column */
 .about-mission-content-col-bg-solid {
-  background: #3a5d50 !important;
-  border-radius: 0 2rem 2rem 0;
-  box-shadow: 0 4px 32px rgba(16,28,26,0.10);
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 @media (max-width: 991px) {
   .about-mission-content-col-bg-solid {
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 0 !important;
   }
 }
-.glass-navbar {
-  position: fixed !important;
+
+/* SVG pattern background for sections */
+.svg-bg-pattern {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  z-index: 3000;
-  background: rgba(255,255,255,0.01) !important;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
-  backdrop-filter: blur(36px) saturate(220%);
-  -webkit-backdrop-filter: blur(36px) saturate(220%);
-  border-bottom: 1.5px solid rgba(255,255,255,0.04);
-  transition: background 0.3s, box-shadow 0.3s;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+section.section-pattern, footer.section-pattern {
+  background: linear-gradient(135deg, #f9f9f9 0%, #e6e9f0 100%) !important;
+  position: relative;
+  z-index: 999;
+}
+
+section.section-pattern .container, section.section-pattern .container-fluid, footer.section-pattern .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Enhance 3D look for cards and modal */
+.glass-card, .modal-content, .product-details-card, .menu-card {
+  box-shadow: 0 12px 48px 0 rgba(44,62,80,0.18), 0 1.5px 24px 0 rgba(180,123,255,0.12) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* 3D effect for hero image */
+.hero-img img {
+  box-shadow: 0 16px 48px rgba(44,62,80,0.18), 0 1.5px 24px 0 rgba(180,123,255,0.12);
+  border-radius: 0;
+  background: rgba(255,255,255,0.85);
+}
+
+/* 3D effect for about image */
+.about-mission-img {
+  box-shadow: 0 12px 48px 0 rgba(44,62,80,0.18), 0 1.5px 24px 0 rgba(180,123,255,0.12);
+  border-radius: 0;
+  background: rgba(255,255,255,0.85);
 }
 
 @media (max-width: 991px) {
@@ -30,13 +65,45 @@
   }
 }
 
-body {
-  padding-top: 110px !important;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1c1c1c 0%, #2e2d29 50%, #3f3e37 100%) fixed !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
+/* --- Premium Text Colors --- */
+h1, h2, h3, h4, h5, h6, .display-4, .display-5, .about-mission-title {
+  color: #1a2233 !important; /* Deep blue for headings */
+  letter-spacing: 0.5px;
 }
+
+p, .about-mission-text, .about-mission-subtitle, .about-mission-content, .section.light-section, #contact p, #contact label, #contact .form-control, footer, .menu-plate-desc, .menu-plate-price {
+  color: #3a4a5d !important; /* Muted blue-gray for body */
+}
+
+.nav-links a, .navbar, .navbar-brand {
+  color: #1a2233 !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.nav-links a:hover {
+  background: #e6e6e6 !important;
+  color: #b47bff !important; /* Premium accent */
+  border-radius: 8px;
+  text-shadow: 0 2px 12px #b47bff44, 0 1px 4px #4cc9f044;
+  box-shadow: none !important;
+}
+.navbar-toggler {
+  color: #1a2233 !important;
+}
+
+/* --- Section Sliding Animation --- */
+.premium-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(.4,1.2,.6,1), transform 0.8s cubic-bezier(.4,1.2,.6,1);
+  will-change: opacity, transform;
+}
+.premium-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Elegant SVG Pattern Backgrounds --- */
 /* Menu slider card animation */
 .slide-left {
   animation: menu-slide-left 0.4s cubic-bezier(.4,1.2,.6,1) both;
@@ -87,23 +154,6 @@ body {
   color: #fff;
 }
 /* Force menu slider row to be horizontal, no wrap */
-.menu-slider-row {
-  flex-wrap: nowrap !important;
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 100%;
-  justify-content: center;
-  align-items: stretch;
-}
-
-/* Hide scrollbar for menu slider row */
-.menu-slider-row::-webkit-scrollbar {
-  display: none;
-}
-.menu-slider-row {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
 .menu-plate-card {
   transition: transform 0.35s cubic-bezier(.4,2,.6,1);
 }
@@ -118,15 +168,28 @@ body {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   font-family: 'Poppins', 'Anton', sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6e9f0 0%, #cfd9df 50%, #a1b0c7 100%) fixed !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section.premium-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(.4,1.2,.6,1), transform 0.8s cubic-bezier(.4,1.2,.6,1);
+  will-change: opacity, transform;
+}
+section.premium-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .bg{
@@ -136,26 +199,65 @@ body {
 
 /* Hero Section */
 .hero {
-background: linear-gradient(to right, #6dd5ed, #2193b0);
+  background-image: url(images/sprouts_img.jpg) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
   color: #333;
   padding-right: 30px;
   padding-left: 30px;
-  padding-bottom: 30px;
-  padding-top: 0px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
+/* Fixed, glassmorphism navbar */
+/* Fixed, glassmorphism navbar with dark text */
 .navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 3000;
+  background: rgba(255,255,255,0.85) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1.5px solid rgba(255,255,255,0.04);
+  transition: background 0.3s, box-shadow 0.3s;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
-  position: relative; /* Ensure nav-links are positioned relative to navbar */
+  color: #1a2233 !important;
+}
+.navbar .nav-links a,
+.navbar .navbar-brand {
+  color: #1a2233 !important;
+}
+.nav-links a {
+  color: #1a2233 !important;
+}
+.nav-links a:hover {
+  color: #b47bff !important;
+}
+
+.glass-navbar {
+  /* For legacy support, but .navbar is the main fixed nav */
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 3000;
+  background: rgba(255,255,255,0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  backdrop-filter: blur(36px) saturate(220%);
+  -webkit-backdrop-filter: blur(36px) saturate(220%);
+  border-bottom: 1.5px solid rgba(255,255,255,0.04);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .logo {
@@ -189,9 +291,14 @@ background: linear-gradient(to right, #6dd5ed, #2193b0);
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 60px;
   flex-wrap: wrap;
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0 0 0 40px;
+  box-sizing: border-box;
+  position: fixed;
 }
 
 .hero-text h1 {
@@ -723,14 +830,14 @@ footer {
   padding-bottom: 60px;
 }
 
-/* Universal dark background for all sections */
-.hero,
+/* Universal light background for all sections */
 .about-mission-section,
 .section.light-section,
 #contact,
 footer {
-  background: transparent !important;
-  color: #fffbe6 !important;
+  background: #f9f9f9 !important;
+  color: #2e3a4d !important;
+  position: relative;
 }
 
 /* Section headings and text */
@@ -739,19 +846,10 @@ footer {
 .display-4,
 .section.light-section h2,
 #contact h2 {
-  color: #fffbe6 !important;
+  color: #1a2233 !important;
 }
 
-.about-mission-text,
-.about-mission-subtitle,
-.about-mission-content,
-.section.light-section,
-#contact p,
-#contact label,
-#contact .form-control,
-footer {
-  color: #bfc9c2 !important;
-}
+/* Remove redundant color override, handled above */
 
 /* Contact form background and fields */
 #contact .container .bg-white,
@@ -775,13 +873,12 @@ footer {
   color: #fffbe6 !important;
 }
 
-/* Footer */
 footer {
-  background: #101c1a !important;
-  color: #bfc9c2 !important;
+  background: #f6f3ff !important;
+  color: #2e3a4d !important;
 }
 footer .social-icons a {
-  color: #fffbe6 !important;
+  color: #b47bff !important;
   opacity: 0.8;
   transition: color 0.2s, opacity 0.2s;
 }
@@ -791,23 +888,7 @@ footer .social-icons a:hover {
 }
 
 /* Navbar */
-.navbar, .nav-links a, .navbar-brand {
-  background: transparent !important;
-  color: #fffbe6 !important;
-}
-.nav-links a {
-  color: #fffbe6 !important;
-}
-.nav-links a:hover {
-  background: transparent !important;
-  color: #fffbe6 !important;
-  border-radius: 8px;
-  text-shadow: 0 2px 12px #25d366, 0 1px 4px #4cc9f0;
-  box-shadow: none !important;
-}
-.navbar-toggler {
-  color: #fffbe6 !important;
-}
+/* Remove conflicting navbar color overrides, keep glass effect */
 
 /* Modal Navbar for mobile */
 .nav-modal {
@@ -820,7 +901,7 @@ footer .social-icons a:hover {
   color: #ff3c00 !important;
 }
 .menu-plate-card {
-  background: transparent;
+  background: transparent !important;
   color: #fff;
   padding: 0 0 40px 0;
   border: none;

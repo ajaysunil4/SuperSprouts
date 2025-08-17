@@ -21,39 +21,40 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/logo-bg.png" />
   </head>
   <body>
-    <!-- HERO / HOME SECTION -->
-    <section id="home" class="hero pb-6 text-white">
-      <header class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light glass-navbar fixed-top">
-        <a class="navbar-brand logo-glow" href="#">
-          <img src="images/logo-bg.png" alt="Super Sprouts Logo" height="100"/>
-        </a>
-        <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="openNavModal()">
-          <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links">
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-light" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-light" href="#menu">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-light" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-light" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-light" href="https://wa.me/917022076781" target="_blank" title="WhatsApp">
-              <i class="fab fa-whatsapp" style="color:#25d366;font-size:1.4em;vertical-align:middle;"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      </header>
+  <!-- HERO / HOME SECTION -->
+  <header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light glass-navbar fixed-top premium-navbar">
+      <a class="navbar-brand logo-glow" href="#">
+        <img src="images/logo-bg.png" alt="Super Sprouts Logo" height="100"/>
+      </a>
+      <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="openNavModal()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-light" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-light" href="#menu">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-light" href="#about">About</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link fw-bold text-light" href="#contact">Contact</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-light" href="https://wa.me/917022076781" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp" style="color:#25d366;font-size:1.4em;vertical-align:middle;"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home" class="hero pb-6 text-white premium-section section-pattern">
       <!-- Modal Navbar for mobile -->
       <div id="navModal" class="nav-modal">
         <div class="nav-modal-content">
@@ -62,13 +63,13 @@
             <li><a href="#home" onclick="closeNavModal()">Home</a></li>
             <li><a href="#menu" onclick="closeNavModal()">Menu</a></li>
             <li><a href="#about" onclick="closeNavModal()">About</a></li>
-            <li><a href="#contact" onclick="closeNavModal()">Contact</a></li>
+            <!-- <li><a href="#contact" onclick="closeNavModal()">Contact</a></li> -->
           </ul>
         </div>
       </div>
 
       <div
-        class="container hero-content d-flex flex-column flex-md-row align-items-center justify-content-between mt-5"
+        class="container hero-content d-flex flex-column flex-md-row align-items-center justify-content-between"
         style="padding-top: 120px;"
       >
         <div class="hero-text col-md-6">
@@ -80,77 +81,84 @@
           </h1>
           <p class="lead">Eat fresh every day with our tasty sprout recipes!</p>
         </div>
-        <div class="hero-img col-md-5 text-center mt-4 mt-md-0">
+        <div class="hero-img col-md-5 text-center mt-4 mt-md-0 d-flex align-items-center justify-content-center gap-3" style="min-height: 420px; position: relative;">
           <img
-            src="images/sprouts_cup.png"
-            alt="Sprouts with dry fruits"
-            class="img-fluid premium-hover"
-          />
-        </div>
+              src="images/sprouts_cup.png"
+              alt="Sprouts with dry fruits"
+              class="img-fluid premium-hover"
+              style="max-width: 420px; z-index: 1; position: relative; margin-left: -160px;"
+            />
+            <img
+              src="images/cup-bg.png"
+              alt="Cup overlay"
+              class="img-fluid premium-hover position-absolute"
+              style="max-width: 240px; right: 80px; bottom: -30px; z-index: 2; background: transparent !important; box-shadow: none !important; transform: rotate(15deg);"
+            />
+          </div>
       </div>
     </section>
 
     <!-- MENU (Elegant Plate Style with Slider) -->
-      <section id="menu" class="menu-elegant-section d-flex align-items-center min-vh-100 pb-5" style="font-family: 'Poppins', 'Anton', sans-serif;">
+  <section id="menu" class="menu-elegant-section d-flex align-items-center min-vh-100 pb-5 premium-section section-pattern" style="font-family: 'Poppins', 'Anton', sans-serif;">
+<!-- ...existing code... -->
       <div class="container-fluid">
         <div class="text-center mb-5">
         <h2 class="display-4 fw-bold text-uppercase">Our Menu</h2>
         </div>
-        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+        <div id="menuCarousel" class="carousel slide " data-bs-ride="carousel" data-bs-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="d-flex justify-content-center align-items-stretch gap-4 flex-wrap menu-slider-row">
-                <div class="menu-plate-card text-center">
-                  <a href="details.html?item=sprout" class="d-block menu-link">
-                    <div class="menu-plate-img mx-auto mb-3">
-                      <img src="images/item1.jpg" alt="Sprout" class="img-fluid" />
-                    </div>
-                    <h3 class="menu-plate-title">Sprout</h3>
-                    <div class="menu-plate-desc">Classic sprouts, fresh and healthy.</div>
-                    <div class="menu-plate-price">₹50</div>
-                  </a>
+              <div class="row row-cols-1 row-cols-md-2 justify-content-center align-items-center">
+                <div class="col d-flex justify-content-center">
+                  <div class="menu-plate-card text-center">
+                    <a href="details.html?item=sprout" class="d-block menu-link">
+                      <div class="menu-plate-img mx-auto mb-3">
+                        <img src="images/item1.jpg" alt="Sprout" class="img-fluid" />
+                      </div>
+                      <h3 class="menu-plate-title">Sprout</h3>
+                      <div class="menu-plate-desc">Classic sprouts, fresh and healthy.</div>
+                      <div class="menu-plate-price">₹50</div>
+                    </a>
+                  </div>
                 </div>
-                <div class="menu-plate-card text-center">
-                  <a href="details.html?item=sprouts-fruits" class="d-block menu-link">
-                    <div class="menu-plate-img mx-auto mb-3">
-                      <img src="images/item2.png" alt="Sprouts with Fruits" class="img-fluid" />
-                    </div>
-                    <h3 class="menu-plate-title">Sprouts with Fruits</h3>
-                    <div class="menu-plate-desc">Sprouts with a medley of fresh fruits.</div>
-                    <div class="menu-plate-price">₹70</div>
-                  </a>
+                <div class="col d-flex justify-content-center">
+                  <div class="menu-plate-card text-center">
+                    <a href="details.html?item=sprouts-fruits" class="d-block menu-link">
+                      <div class="menu-plate-img mx-auto mb-3">
+                        <img src="images/item2.png" alt="Sprouts with Fruits" class="img-fluid" />
+                      </div>
+                      <h3 class="menu-plate-title">Sprouts with Fruits</h3>
+                      <div class="menu-plate-desc">Sprouts with a medley of fresh fruits.</div>
+                      <div class="menu-plate-price">₹70</div>
+                    </a>
+                  </div>
                 </div>
-                <div class="menu-plate-card text-center">
-                  <a href="details.html?item=sprouts-dryfruits" class="d-block menu-link">
-                    <div class="menu-plate-img mx-auto mb-3">
-                      <img src="images/item3.png" alt="Sprouts with Dry Fruits" class="img-fluid" />
-                    </div>
-                    <h3 class="menu-plate-title">Sprouts with Dry Fruits</h3>
-                    <div class="menu-plate-desc">Sprouts with premium dry fruits.</div>
-                    <div class="menu-plate-price">₹70</div>
-                  </a>
+                <div class="col d-flex justify-content-center">
+                  <div class="menu-plate-card text-center">
+                    <a href="details.html?item=sprouts-dryfruits" class="d-block menu-link">
+                      <div class="menu-plate-img mx-auto mb-3">
+                        <img src="images/item3.png" alt="Sprouts with Dry Fruits" class="img-fluid" />
+                      </div>
+                      <h3 class="menu-plate-title">Sprouts with Dry Fruits</h3>
+                      <div class="menu-plate-desc">Sprouts with premium dry fruits.</div>
+                      <div class="menu-plate-price">₹70</div>
+                    </a>
+                  </div>
                 </div>
-                <div class="menu-plate-card text-center">
-                  <a href="details.html?item=sprouts-egg" class="d-block menu-link">
-                    <div class="menu-plate-img mx-auto mb-3">
-                      <img src="images/item4.jpg" alt="Sprouts with Egg" class="img-fluid" />
-                    </div>
-                    <h3 class="menu-plate-title">Sprouts with Egg</h3>
-                    <div class="menu-plate-desc">Sprouts topped with protein-rich egg.</div>
-                    <div class="menu-plate-price">₹65</div>
-                  </a>
+                <div class="col d-flex justify-content-center">
+                  <div class="menu-plate-card text-center">
+                    <a href="details.html?item=sprouts-egg" class="d-block menu-link">
+                      <div class="menu-plate-img mx-auto mb-3">
+                        <img src="images/item4.jpg" alt="Sprouts with Egg" class="img-fluid" />
+                      </div>
+                      <h3 class="menu-plate-title">Sprouts with Egg</h3>
+                      <div class="menu-plate-desc">Sprouts topped with protein-rich egg.</div>
+                      <div class="menu-plate-price">₹65</div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Custom Arrow Controls -->
-          <div class="menu-arrow-controls d-flex justify-content-center align-items-center mt-4 gap-4">
-            <button class="menu-arrow-btn menu-arrow-prev" aria-label="Previous">
-              <span class="menu-arrow-icon">&#8592;</span>
-            </button>
-            <button class="menu-arrow-btn menu-arrow-next" aria-label="Next">
-              <span class="menu-arrow-icon">&#8594;</span>
-            </button>
           </div>
         </div>
         <script>
@@ -229,22 +237,23 @@
     </section>
 
     <!-- ABOUT (Mission) -->
-    <section id="about" class="about-mission-section d-flex align-items-center min-vh-100 py-5">
-      <div class="container-fluid">
-        <div class="row g-0 align-items-stretch about-mission-row">
-          <div class="col-lg-6 about-mission-img-col">
-            <div class="about-mission-img h-100 w-100" style="background: url('images/sprouts_img.jpg') center center/cover no-repeat;"></div>
-          </div>
-          <div class="col-lg-6 about-mission-content-col d-flex align-items-center">
-            <div class="about-mission-content-col-bg-solid about-mission-content p-5 w-100">
-              <h2 class="about-mission-title mb-5" style="color: #fffbe6; font-family: 'Poppins',sans-serif; font-size: 2.5rem; font-weight: 600;">OUR MISSION</h2>
+  <section id="about" class="about-mission-section d-flex align-items-center min-vh-100 premium-section section-pattern">
+<!-- ...existing code... -->
+      <div class="row g-0 align-items-stretch about-mission-row h-100 w-100" style="min-height: 100vh; margin:0;">
+        <div class="col-lg-6 about-mission-img-col d-flex" style="min-height: 100%;">
+          <div class="about-mission-img h-100 w-100" style="background: url('images/sprouts_img.jpg') center center/cover no-repeat;"></div>
+        </div>
+        <div class="col-lg-6 about-mission-content-col d-flex align-items-stretch" style="min-height: 100%;">
+          <div class="about-mission-content d-flex flex-column justify-content-center w-100 h-100 p-0" style="background: #f9f9f9 !important; min-height: 100vh; border-radius: 0; box-shadow: none; color: #222;">
+            <div class="px-5 py-4" style="box-shadow: none; border-radius: 0; color: #222;">
+              <h2 class="about-mission-title mb-5" style="color: #222; font-family: 'Poppins',sans-serif; font-size: 2.5rem; font-weight: 600;">OUR MISSION</h2>
               <div class="mb-4">
-                <h5 class="about-mission-subtitle mb-2" style="color: #fffbe6; font-size: 1.2rem; font-weight: 500;">Our Story</h5>
-                <p class="about-mission-text mb-4" style="color: #fffbe6; font-size: 1rem;">Super Sprouts, located in Mysuru, specializes in healthy sprout-based dishes designed for conscious eaters.</p>
+                <h5 class="about-mission-subtitle mb-2" style="color: #333; font-size: 1.2rem; font-weight: 500;">Our Story</h5>
+                <p class="about-mission-text mb-4" style="color: #333; font-size: 1rem;">Super Sprouts, located in Mysuru, specializes in healthy sprout-based dishes designed for conscious eaters.</p>
               </div>
               <div class="mb-5">
-                <h5 class="about-mission-subtitle mb-2" style="color: #fffbe6; font-size: 1.2rem; font-weight: 500;">Our Vision</h5>
-                <p class="about-mission-text" style="color: #fffbe6; font-size: 1rem;">We take pride in offering unique combinations of sprouts with fruits, dry fruits, or egg, catering to the health-conscious customer who seeks flavor and nutrition. Every dish is crafted with care, ensuring a delightful experience that supports a healthy lifestyle. Our mission is to make sprouted meals accessible and enjoyable for everyone.</p>
+                <h5 class="about-mission-subtitle mb-2" style="color: #333; font-size: 1.2rem; font-weight: 500;">Our Vision</h5>
+                <p class="about-mission-text" style="color: #333; font-size: 1rem;">We take pride in offering unique combinations of sprouts with fruits, dry fruits, or egg, catering to the health-conscious customer who seeks flavor and nutrition. Every dish is crafted with care, ensuring a delightful experience that supports a healthy lifestyle. Our mission is to make sprouted meals accessible and enjoyable for everyone.</p>
               </div>
             </div>
           </div>
@@ -253,7 +262,7 @@
     </section>
 
     <!-- CONTACT -->
-      <section id="contact" class="d-flex align-items-center min-vh-100 py-5">
+      <!-- <section id="contact" class="d-flex align-items-center min-vh-100 py-5">
       <div class="container">
         <div class="text-center mb-5">
           <h2 class="display-4 fw-bold text-uppercase">Contact Us</h2>
@@ -312,10 +321,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- FOOTER -->
-      <footer class="text-white text-center py-4">
+  <footer class="text-white text-center py-4 premium-section section-pattern">
+<!-- ...existing code... -->
       <div class="container">
         <p>Follow us on:</p>
         <div class="social-icons mb-3">
@@ -352,8 +362,8 @@
       style="display: none"
     >
       <div
-        class="modal-content text-center position-relative bg-white p-4 rounded shadow"
-        style="max-width: 400px"
+        class="modal-content text-center position-relative bg-white p-4 rounded shadow-lg section-3d"
+        style="max-width: 400px; box-shadow: 0 12px 48px 0 rgba(44,62,80,0.18), 0 1.5px 24px 0 rgba(180,123,255,0.12);"
       >
         <span
           class="close-btn position-absolute top-0 end-0 m-3 fs-4"
@@ -366,8 +376,84 @@
     </div> -->
 
     <!-- JS -->
+    <!-- SVG Pattern for Section Backgrounds -->
+    <svg style="display:none;">
+      <defs>
+        <pattern id="pattern-waves" patternUnits="userSpaceOnUse" width="120" height="60">
+          <path d="M0 30 Q 30 0 60 30 T 120 30" fill="none" stroke="#e6e9f0" stroke-width="2"/>
+        </pattern>
+        <pattern id="pattern-dots" patternUnits="userSpaceOnUse" width="40" height="40">
+          <circle cx="20" cy="20" r="2.5" fill="#b47bff" opacity="0.18"/>
+        </pattern>
+      </defs>
+    </svg>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+      // Parallax stacking effect: sections overlap and hide previous as you scroll
+      document.addEventListener('DOMContentLoaded', function() {
+        const sections = [
+          document.getElementById('home'),
+          document.getElementById('menu'),
+          document.getElementById('about')
+        ];
+        function updateParallaxSections() {
+          let lastActive = -1;
+          sections.forEach((section, i) => {
+            const rect = section.getBoundingClientRect();
+            // Section is active if its top is at or above the viewport top and not fully out of view
+            if (rect.top <= 0 && rect.bottom > 0) {
+              section.classList.add('active');
+              lastActive = i;
+            } else {
+              section.classList.remove('active');
+            }
+          });
+          // Only the topmost visible section gets the highest z-index
+          sections.forEach((section, i) => {
+            section.style.zIndex = (sections.length - i) + (i === lastActive ? 10 : 0);
+          });
+        }
+        window.addEventListener('scroll', updateParallaxSections);
+        window.addEventListener('DOMContentLoaded', updateParallaxSections);
+        updateParallaxSections();
+      });
+      // Add SVG pattern backgrounds to sections
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.section-pattern').forEach(function(section, i) {
+          // Remove if already present
+          let old = section.querySelector('.svg-bg-pattern');
+          if (old) old.remove();
+          let svg = document.createElement('div');
+          svg.className = 'svg-bg-pattern';
+          svg.style.position = 'absolute';
+          svg.style.top = 0;
+          svg.style.left = 0;
+          svg.style.width = '100%';
+          svg.style.height = '100%';
+          svg.style.zIndex = 0;
+          svg.style.pointerEvents = 'none';
+          svg.style.opacity = '0.7';
+          svg.innerHTML =
+            '<svg width="100%" height="100%" viewBox="0 0 1200 400" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:100%;"><rect width="100%" height="100%" fill="url(#pattern-dots)"/>' +
+            (i % 2 === 0 ? '<rect width="100%" height="100%" fill="url(#pattern-waves)"/>' : '') +
+            '</svg>';
+          section.style.position = 'relative';
+          section.prepend(svg);
+        });
+      });
+      // Section sliding animation on scroll
+      function revealSections() {
+        const sections = document.querySelectorAll('section.premium-section, footer.premium-section');
+        const trigger = window.innerHeight * 0.85;
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top < trigger) {
+            section.classList.add('visible');
+          }
+        });
+      }
+      window.addEventListener('scroll', revealSections);
+      window.addEventListener('DOMContentLoaded', revealSections);
       function openModal() {
         document.getElementById("comingSoonModal").style.display = "flex";
       }
